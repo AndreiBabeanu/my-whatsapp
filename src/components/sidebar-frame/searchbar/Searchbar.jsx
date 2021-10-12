@@ -5,7 +5,9 @@ import "./Searchbar.css";
 const Searchbar = () => {
   return (
     <div className="searchbar-container">
-      <SearchIcon className="search-icon" />
+      <div className="search-icon-container">
+        <SearchIcon className='search-icon'/>
+      </div>
       <input
         type="text"
         placeholder="Search or start new chat"

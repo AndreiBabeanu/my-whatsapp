@@ -1,0 +1,10 @@
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  scroll-margin-block-end: scroll;
+  overflow-y: scroll;
+
+  /* border: 1px solid blue; */
+}

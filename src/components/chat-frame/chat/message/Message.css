@@ -1,0 +1,26 @@
+.message-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+
+}
+
+.time {
+  display: flex;
+  bottom: 0;
+  font-size: 10px;
+  padding-left: 30px;
+  justify-self: end;
+}
+
+.line-message {
+  display: flex;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  margin-bottom: 2px;
+  /* color: black;
+    opacity: 1; */
+}
