@@ -1,36 +1,25 @@
-import React from 'react'
-import Contact from './contact/Contact'
-import './Contacts.css'
+import React, { useContext } from "react";
+import Contact from "./contact/Contact";
+import "./Contacts.css";
+import { Context } from "../../../App";
 
 const Contacts = () => {
-    return (
-        <div className="contacts-container">
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
-            <Contact />
+  //   const [group, setGroup] = useState({
+  //     img: "",
+  //     title: "Grup de fotbal",
+  //     messages: [{}],
+  //     createdAt: null,
+  //   });
 
+  const { groups } = useContext(Context);
 
+  return (
+    <div className="contacts-container">
+      {groups.map((group, index) => (
+        <Contact group={group} key={index} />
+      ))}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Contacts
+export default Contacts;

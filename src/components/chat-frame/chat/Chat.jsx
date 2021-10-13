@@ -1,16 +1,23 @@
-import React from 'react'
-import './Chat.css'
-import Message from './message/Message'
+import React, { useContext } from "react";
+import "./Chat.css";
+import Message from "./message/Message";
+import { Context } from "../../../App";
 
 const Chat = () => {
-    return (
-        <div className='chat-container'>
-            <Message message='Hello world!!'/>
-            <Message message='Hello world!!'/>
-            <Message message='Hello world!!'/>
+  const { messages } = useContext(Context);
+  console.log(messages);
+  return (
+    <div className="chat-container">
+      {messages.map((message, index) => (
+        <Message
+          key={index}
+          message={message.text}
+          date={message.date}
+          writer={message.writer}
+        />
+      ))}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Chat
+export default Chat;
