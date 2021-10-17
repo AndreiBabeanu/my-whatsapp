@@ -2,26 +2,54 @@ import { Button, TextField, Typography } from "@mui/material";
 import React, { useContext, useState } from "react";
 import "./Group.css";
 import { Context } from "../../../../App";
+import { addGroup } from "../../../../actions/groups";
+import { useDispatch } from "react-redux";
 
 const Group = () => {
-  const { groups, setGroups, showCreateGroup, setShowCreateGroup } =
-    useContext(Context);
+  const { showCreateGroup, setShowCreateGroup } = useContext(Context);
+  const dispatch = useDispatch();
 
   const [group, setGroup] = useState({
     img: "",
+    creator: "",
     title: "",
-    messages: [{}],
-    createdAt: null,
-    id: 0,
+    messages: [],
+    participants: [],
+    createdAt: {
+      day: "",
+      month: "",
+      year: "",
+      hours: "",
+      minutes: "",
+    },
   });
 
   const handleChange = (e) => {
-    setGroup({ ...group, id: group.id + 1, createdAt: new Date(), title: e.target.value });
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    setGroup({
+      ...group,
+      createdAt: {
+        day: day,
+        month: month,
+        year: year,
+        hours: hours,
+        minutes: minutes,
+      },
+      title: e.target.value,
+    });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGroups([...groups, group]);
-    setGroup({ img: "", title: "", message: null, createdAt: null });
+
+    dispatch(addGroup(group));
+
+    setGroup({ ...group, title: "" });
     setShowCreateGroup(!showCreateGroup);
   };
 

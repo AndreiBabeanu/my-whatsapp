@@ -6,22 +6,16 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 
 function App() {
-  const [messages, setMessages] = useState([]);
-  const [groups, setGroups] = useState([]);
   const [showCreateGroup, setShowCreateGroup] = useState(false);
-  const [currentGroupId, setCurrentGroupId] = useState(0)
-  
+  const [currentGroupId, setCurrentGroupId] = useState(0);
+
   return (
     <Context.Provider
       value={{
-        messages,
-        setMessages,
-        groups,
-        setGroups,
         showCreateGroup,
         setShowCreateGroup,
         currentGroupId,
-        setCurrentGroupId
+        setCurrentGroupId,
       }}
     >
       <div className="app">

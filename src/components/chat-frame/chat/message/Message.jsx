@@ -1,12 +1,12 @@
 import React from "react";
 import "./Message.css";
 
-const Message = ({ message, writer, date }) => {
+const Message = ({ message }) => {
   return (
     <div className="message-container">
       <p className="line-message">
-        {message}
-        <span className="time">{`${date.getHours()}:${date.getMinutes()}`}</span>
+        {message?.text}
+        <span className="time">{`${message?.date?.hours}:${message?.date?.minutes}`}</span>
       </p>
     </div>
   );
