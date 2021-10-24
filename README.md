@@ -6,6 +6,6 @@ My Whatsapp. Kind of Whatsapp clone
 
 Trying to implement a react app as whatsapp is. The aim is reaching all functionalities of a chat app.
 
-## Desire to accomplish
+## Desire to achieve
 
-The facts that I want to gain are developing frontend skills
+I want to gain more frontend development skills
