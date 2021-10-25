@@ -9,3 +9,5 @@ Trying to implement a react app as whatsapp is. The aim is reaching all function
 ## Desire to achieve
 
 I want to gain more frontend development skills
+
+in the working stage
