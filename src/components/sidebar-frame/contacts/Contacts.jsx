@@ -6,11 +6,13 @@ import { fetchGroups } from "../../../actions/groups";
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const groups = useSelector((state) => state.groups);
+  const groups = useSelector((state) => {
+    // console.log(state);
+    return state.groups.groups;
+  });
 
   useEffect(() => {
     dispatch(fetchGroups());
-    console.log("de cate ori cheama");
   }, []);
 
   return (

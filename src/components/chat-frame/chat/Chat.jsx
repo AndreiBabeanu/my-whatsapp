@@ -9,7 +9,7 @@ const Chat = () => {
   const [group, setGroup] = useState({
     messages: [],
   });
-  const groups = useSelector((state) => state.groups);
+  const groups = useSelector((state) => state.groups.groups);
   const selectedGroup = groups.find((group) => group._id === currentGroupId);
   const lastMessageRef = useRef();
 

@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import { Context } from "../../../App";
 
 const ChatHeader = () => {
-  const groups = useSelector((state) => state.groups);
+  const groups = useSelector((state) => state.groups.groups);
   const { currentGroupId } = useContext(Context);
 
   const selectedGroup = groups.find((g) => g._id === currentGroupId);

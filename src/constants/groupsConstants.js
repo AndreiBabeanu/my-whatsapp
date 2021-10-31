@@ -1,3 +1,5 @@
 export const ADD_GROUP = 'ADD_GROUP'
 export const FETCH_GROUPS = 'FETCH_GROUPS'
 export const ADD_MESSAGE = 'ADD_MESSAGE'
+export const SIGN_UP = 'SIGN_UP'
+export const SIGN_IN = 'SIGN_IN'

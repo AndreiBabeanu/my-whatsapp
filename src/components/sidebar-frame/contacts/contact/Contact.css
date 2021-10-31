@@ -7,6 +7,12 @@
   height: 80px;
   /* border: 1px solid blue; */
   padding: 0 10px;
+  /* background-color: ${({currentGroupId}) => (currentGroupId ? "rgb(224, 219, 219, 0.5)" : "#fff")}; */
+}
+
+.contact-container:hover {
+  background-color: rgb(224, 219, 219, 0.5);
+  /* opacity: 0.5; */
 }
 
 .group {

@@ -17,7 +17,7 @@ const TypeSection = () => {
   const { currentGroupId } = useContext(Context);
 
   const [message, setMessage] = useState(initialState);
-  const groups = useSelector((state) => state.groups);
+  const groups = useSelector((state) => state.groups.groups);
 
   const group = groups.find((group) => group._id === currentGroupId);
   // const [group, setGroup] = useState(selectedGroup);
